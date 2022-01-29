@@ -63,10 +63,6 @@ export default function SelectTextFields() {
   }
 
   const initialValues = {
-    Sections: '',
-    SubStation: '',
-    Feeder: '',
-    DTR: '',
     Meter: '',
     Ifyoualreadyknowthemeternumberpleaseenterhere: '',
     FromDate: '',
@@ -88,12 +84,12 @@ export default function SelectTextFields() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('InputFields', values);
+    console.log('InputFields',values);
+    console.log("section:",section);
+    console.log("substation:",newsubsta);
+    console.log("Feeder:",newfeeder);
+    console.log("DTR:",newDTR);
     setValues({
-      Sections: '',
-      SubStation: '',
-      Feeder: '',
-      DTR: '',
       Meter: '',
       Ifyoualreadyknowthemeternumberpleaseenterhere: '',
       FromDate: '',
@@ -115,7 +111,7 @@ export default function SelectTextFields() {
         <Toolbar >
           <Box sx={{ width: '100%', maxWidth: 300 }}>
             <Typography variant='h6' gutterBottom component="div"><Home color="black" /><KeyboardArrowRightIcon />Reports</Typography>
-            <Typography variant="h6" gutterBottom component="div">Load Profile Report</Typography>
+            <Typography variant="h6" gutterBottom component="div">Power Factor Report</Typography>
           </Box>
         </Toolbar>
       </AppBar>
